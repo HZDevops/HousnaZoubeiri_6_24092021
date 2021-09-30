@@ -6,6 +6,7 @@ dotenv.config();
 const app = express();
 const DB_PASSWORD = process.env.DB_PASSWORD;
 const DB_NAME = process.env.DB_NAME;
+const userRoutes = require('./routes/user');
 
 mongoose.connect(
   `mongodb+srv://hzoubeiri:${DB_PASSWORD}@cluster0.7e2xu.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
@@ -25,5 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }));
+
+app.use('/api/auth', userRoutes);
 
 module.exports = app;
