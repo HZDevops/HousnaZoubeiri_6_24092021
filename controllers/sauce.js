@@ -1,8 +1,10 @@
+//Import Sauce schema from models
 const ModelsSauce = require('../models/sauce');
-const fs = require('fs');
-const sauce = require('../models/sauce');
 
-//Creat a new sauce
+//Import fs package for managing files
+const fs = require('fs');
+
+//Create a new sauce
 function createSauce(req, res, next) {
   const sauceObject = JSON.parse(req.body.sauce);
   const sauce = new ModelsSauce({

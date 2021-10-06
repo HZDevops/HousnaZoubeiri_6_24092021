@@ -1,5 +1,7 @@
+//Import package for create and check token
 const jwt = require('jsonwebtoken');
 
+//Extract token from Authorization header for checking userID
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(' ')[1];
@@ -12,7 +14,7 @@ module.exports = (req, res, next) => {
     }
   } catch {
     res.status(401).json({
-      error: new Error('Invalid request!')
+      error: new Error('Invalid request!'),
     });
   }
 };
