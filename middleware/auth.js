@@ -1,4 +1,3 @@
-//Import package for create and check token
 const jwt = require('jsonwebtoken');
 
 //Extract token from Authorization header for checking userID

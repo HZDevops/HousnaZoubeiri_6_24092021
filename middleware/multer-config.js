@@ -1,4 +1,3 @@
-//Import Multer package for managing files
 const multer = require('multer');
 
 const MIME_TYPES = {
@@ -19,5 +18,4 @@ const storage = multer.diskStorage({
   },
 });
 
-//Export multer
 module.exports = multer({ storage: storage }).single('image');

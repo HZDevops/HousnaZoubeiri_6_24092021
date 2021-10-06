@@ -1,4 +1,3 @@
-//Create an Express Router
 const express = require('express');
 const router = express.Router();
 
@@ -9,5 +8,4 @@ const userCtrl = require('../controllers/user');
 router.post('/signup', userCtrl.signup);
 router.post('/login', userCtrl.login);
 
-//Export router to be used by app.js
 module.exports = router;

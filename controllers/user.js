@@ -1,10 +1,5 @@
-//Import of the user schema from models/user.js
 const User = require('../models/user');
-
-//Import bcrypt package for password-hashing function
 const bcrypt = require('bcrypt');
-
-//Import package for users token
 const jwt = require('jsonwebtoken');
 
 //Add a user in database with password hashed

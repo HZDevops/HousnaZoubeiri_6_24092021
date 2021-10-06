@@ -1,4 +1,3 @@
-//Import HTTP package and app.js
 const http = require('http');
 const app = require('./app');
 

@@ -1,4 +1,3 @@
-//Create an Express Router
 const express = require('express');
 const router = express.Router();
 
@@ -17,5 +16,4 @@ router.delete('/:id', auth, sauceCtrl.deleteSauce);
 router.get('/:id', auth, sauceCtrl.getOneSauce);
 router.get('/', auth, sauceCtrl.getAllSauce);
 
-//Export router to be used by app.js
 module.exports = router;
